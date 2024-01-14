@@ -9,6 +9,8 @@ public class NewBehaviourScript : MonoBehaviour
     public float maxVelocity;
     public float minY;
 
+    public LivesManager livesManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +42,7 @@ public class NewBehaviourScript : MonoBehaviour
 
       if(transform.position.y < minY)
         {
+            livesManager.LoseLife();
             transform.position = Vector2.zero;
             ballRb.velocity = new Vector2(0, -minVelocity);
         }
