@@ -19,26 +19,21 @@ public class Score : MonoBehaviour
 
     public void HighScoreUpdate()
     {
-        // jau turi highScore
+       
         if (PlayerPrefs.HasKey("SavedHighScore"))
-        {
-            // ar naujas HighScore didesnis uz senesni
+        {           
             if (currentScore > PlayerPrefs.GetInt("SavedHighScore"))
             {
-                //naujas HighScore
                 PlayerPrefs.SetInt("SavedHighScore", currentScore);
             }
         }
         else
         {
-            //jei nera HighScore
             PlayerPrefs.SetInt("SavedHighScore", currentScore);
         }
 
-        //atnaujname TMP
         finalScoreText.text = currentScore.ToString();
         highScoreText.text = PlayerPrefs.GetInt("SavedHighScore").ToString();
-
     }
 
 }

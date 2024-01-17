@@ -9,6 +9,7 @@ public class NewBehaviourScript : MonoBehaviour
     public float maxVelocity;
     public float minY;
 
+
     public LivesManager livesManager;
 
     // Start is called before the first frame update

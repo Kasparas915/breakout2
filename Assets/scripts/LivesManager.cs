@@ -20,7 +20,6 @@ public class LivesManager : MonoBehaviour
             Time.timeScale = 0;
             GameOver1.SetActive(true);
 
-            //iskvieciamas HighScoreUpdate
             scoreManager.HighScoreUpdate();
         }
     }
